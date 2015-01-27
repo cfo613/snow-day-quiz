@@ -1,0 +1,57 @@
+1. What is the difference between an API and a server?
+
+    An API, or Application Programming Interface, defines the parameters of communication between a
+    program and an application. More simply put - it is like a coding contract between the program
+    and the app that outlines the ways they can interact.
+    A server is a program that is capable of accepting requests from multiple clients and sending
+    out responses accordingly. It allows clients within the same network to communicate to one
+    another via the server.
+    Thus, an API can shape the responses between a server and a client, whereas, a server is actually
+    responsible for sending the responses.
+
+2. What does a DNS server do when you type "www.google.com" into an address bar?
+
+    DNS, or the Domain Name System, is an essential component of the internet, as it's the primary
+    directory service. A DNS server is any computer registered to join the DNS. All DNS servers are
+    organized in a hierarchy. At the top of the hierarchy are the root servers that store a complete
+    database of internet domain names and their corresponding IP addresses. Only the 13 root servers
+    contain the complete database, while all other DNS servers are installed at lower levels of the
+    hierarchy and maintain only certain pieces of the database.
+
+    Thus, when a DNS server receives a request, such as typing "www.google.com" into the address bar,
+    it searches the database for that name and corresponding IP address. If the request is not in it's
+    database, then it temporarily transforms from a server to a DNS client. It proceeds to pass the
+    request to another DNS server or up to the next level in the hierarchy until it finds the match.
+    Then, the response flows back down the chain of DNS servers to the client, so that you receive
+    the "www.google.com" IP address and you are routed to google.com.
+
+    Source: http://compnetworking.about.com/od/dns_domainnamesystem/f/dns_servers.htm
+
+3. What are some differences between a single page application and a multipage application? List one
+example of each.
+
+    A single page application (SPA) does not refresh the browser, and as a result, has a much greater
+    focus on DOM (Document Object Model) manipulation when compared to a multi-page application. A SPA
+    dynamically communicates with the server behind the scenes asking for data (e.g. JSON) rather than a
+    new page to load. SPA examples include GoogleMaps and Trello.
+
+    A multi-page application (MPA) does ask the server for a new page, thus the server is sending back
+    new HTML rather than just data for you to manipulate. MPA examples include Wikipedia and Reddit.
+
+4. Why do we use RESTful routes?
+
+    The idea behind REST (Representational State Transfer) is to use simple HTTP to make calls between
+    machines rather than more complex mechanisms. Whenever we navigate through a site by clicking links,
+    we're making a state transition, which brings us to the next page (representing the next state of the
+    application). When we use RESTful routes, we're keeping things simple, and ensuring that we are not
+    holding state between requests (meaning that all the information necessary to respond to a request
+    is available in each individual request; no data, or state, is held by the server from request to
+    request).
+
+    Source: http://www.codecademy.com/courses/ruby-beginner-en-pEdhY/0/4?curriculum_id=5122d839c0a131c35f00013d
+
+5. What is an API key and why are they used?
+
+    An API key is a code that programs pass when calling an API in order to identify the calling program,
+    developer, or user. API keys are used to track and control how the API is being used, thus they often
+    act as both a unique identifier and an authentication token.
